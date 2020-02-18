@@ -1,0 +1,47 @@
+{
+  "name": "ds-style-react",
+  "version": "0.0.11",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "build": "BABEL_ENV=production babel src -d dist"
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@storybook/addon-a11y": "^5.3.13",
+    "@storybook/addon-actions": "^5.3.12",
+    "@storybook/addon-knobs": "^5.3.3",
+    "@storybook/addon-links": "^5.3.12",
+    "@storybook/addon-notes": "^5.3.3",
+    "@storybook/addon-storysource": "^5.3.13",
+    "@storybook/addons": "^5.3.3",
+    "@whitespace/storybook-addon-html": "^1.2.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "style-loader": "^1.1.3",
+    "styled-components": "^5.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
+    "@babel/runtime": "^7.8.4",
+    "@storybook/html": "^5.3.3",
+    "@storybook/preset-create-react-app": "^1.5.2",
+    "@storybook/react": "^5.3.12",
+    "babel-loader": "^8.0.6",
+    "babel-preset-react-app": "^9.1.1",
+    "css-loader": "^3.4.2",
+    "prop-types": "^15.7.2"
+  }
+}
