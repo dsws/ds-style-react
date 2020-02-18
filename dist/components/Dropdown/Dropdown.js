@@ -13,6 +13,7 @@ export default function Dropdown(_ref) {
       inputChar = _ref$data.inputChar,
       hintText = _ref$data.hintText,
       hintId = _ref$data.hintId,
+      selected = _ref$data.selected,
       _onChange = _ref.onChange,
       _onBlur = _ref.onBlur,
       _onFocus = _ref.onFocus;
@@ -43,7 +44,8 @@ export default function Dropdown(_ref) {
     },
     onFocus: function onFocus(e) {
       return _onFocus(e);
-    }
+    },
+    defaultValue: selected
   }, options && options.map(function (item, idx) {
     return React.createElement("option", {
       key: idx,

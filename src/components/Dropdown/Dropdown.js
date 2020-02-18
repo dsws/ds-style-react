@@ -4,7 +4,19 @@ import Hint from "../Hint/Hint";
 import PropTypes from "prop-types";
 
 export default function Dropdown({
-  data: { id, name, placeholder, options, labelText, labelType, labelFlag, inputChar, hintText, hintId },
+  data: {
+    id,
+    name,
+    placeholder,
+    options,
+    labelText,
+    labelType,
+    labelFlag,
+    inputChar,
+    hintText,
+    hintId,
+    selected
+  },
   onChange,
   onBlur,
   onFocus
@@ -17,14 +29,25 @@ export default function Dropdown({
       {hintText && <Hint data={{ hintId, hintText }} />}
 
       <select
-        className={`ontario-input${inputChar&&"--"+inputChar+"-char-width"} ontario-dropdown`}
+        className={`ontario-input${inputChar &&
+          "--" + inputChar + "-char-width"} ontario-dropdown`}
         id={id}
         name={name}
         onChange={e => onChange(e)}
         onBlur={e => onBlur(e)}
         onFocus={e => onFocus(e)}
+        defaultValue={selected}
+
       >
-        {options && options.map((item,idx)=> <option key={idx} value={item.id}>{item.value}</option>)}
+        {options &&
+          options.map((item, idx) => (
+            <option
+              key={idx}
+              value={item.id}
+            >
+              {item.value}
+            </option>
+          ))}
       </select>
     </div>
   );
@@ -33,15 +56,16 @@ export default function Dropdown({
 Dropdown.propTypes = {
   data: PropTypes.shape({
     id: PropTypes.string,
-    name: PropTypes.string, 
-    placeholder: PropTypes.string, 
-    options: PropTypes.array, 
-    labelText: PropTypes.string, 
-    labelType: PropTypes.string, 
-    labelFlag: PropTypes.string, 
-    inputChar: PropTypes.string, 
-    hintText: PropTypes.string, 
-    hintId: PropTypes.string
+    name: PropTypes.string,
+    placeholder: PropTypes.string,
+    options: PropTypes.array,
+    labelText: PropTypes.string,
+    labelType: PropTypes.string,
+    labelFlag: PropTypes.string,
+    inputChar: PropTypes.string,
+    hintText: PropTypes.string,
+    hintId: PropTypes.string,
+    selected: PropTypes.string
   }),
   onChange: PropTypes.func,
   onBlur: PropTypes.func,

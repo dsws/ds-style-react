@@ -3,7 +3,6 @@ import { action } from '@storybook/addon-actions';
 import { withA11y } from '@storybook/addon-a11y';
 
 import Button from './Button';
-import './Button.css';
 
 export default {
   component: Button,

@@ -28,7 +28,8 @@ export var Data = {
   labelFlag: '',
   hintText: '',
   hintId: '',
-  inputChar: ''
+  inputChar: '',
+  selected: ''
 };
 export var actionsData = {
   onChange: action('onChange'),
@@ -45,6 +46,14 @@ export var PrimaryRequired = function PrimaryRequired() {
   return React.createElement(Dropdown, Object.assign({
     data: _objectSpread({}, Data, {
       labelFlag: "(Required)"
+    })
+  }, actionsData));
+};
+export var PrimaryRequiredSelected = function PrimaryRequiredSelected() {
+  return React.createElement(Dropdown, Object.assign({
+    data: _objectSpread({}, Data, {
+      labelFlag: "(Optional)",
+      selected: 2
     })
   }, actionsData));
 };

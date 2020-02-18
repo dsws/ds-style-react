@@ -1,13 +1,16 @@
 {
   "name": "ds-style-react",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build": "BABEL_ENV=production babel src -d dist"
+    "build": "BABEL_ENV=production babel src -d dist",
+    "build-storybook-static": "build-storybook -c .storybook -o .out",
+    "deploy-storybook": "storybook-to-ghpages"
+
   },
   "babel": {
     "presets": [
@@ -39,6 +42,7 @@
     "@storybook/html": "^5.3.3",
     "@storybook/preset-create-react-app": "^1.5.2",
     "@storybook/react": "^5.3.12",
+    "@storybook/storybook-deployer": "^2.8.1",
     "babel-loader": "^8.0.6",
     "babel-preset-react-app": "^9.1.1",
     "css-loader": "^3.4.2",

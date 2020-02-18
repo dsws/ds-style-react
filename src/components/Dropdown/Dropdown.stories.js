@@ -26,6 +26,7 @@ export const Data = {
   hintText: '',
   hintId: '',
   inputChar: '',
+  selected: '',
 };
 
 export const actionsData = {
@@ -42,6 +43,11 @@ export const Primary = () => {
 export const PrimaryRequired = () => {
   return <Dropdown data={{ ...Data, labelFlag: "(Required)" }} {...actionsData} />;
 };
+
+export const PrimaryRequiredSelected = () => {
+  return <Dropdown data={{ ...Data, labelFlag: "(Optional)", selected: 2 }} {...actionsData} />;
+};
+
 
 
 export const PrimaryRequiredChar20 = () => {
